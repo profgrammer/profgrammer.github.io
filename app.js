@@ -34,7 +34,7 @@ async function updateSources(){
 }
 
 async function updateNews(source = defaultSource){
-  const res = await fetch(`http://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${key}`);
+  const res = await fetch(`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${key}`);
   const json = await res.json();
 
   main.innerHTML = json.articles.map(createArticle).join('\n');
